@@ -3,14 +3,14 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    grid-template: repeat(auto-fill, 10, 1fr) / repeat(auto-fill, 10, 1fr);
+    grid-template: repeat(auto-fill, 12, 1fr) / repeat(auto-fill, 12, 1fr);
     background-color: grey;
 }
 
 #sidebar {
     padding-left: 20px;
     background-color: rgb(113, 113, 248);
-    grid-area: 1 / 1 / 10 / 1;
+    grid-area: 1 / 1 / 12 / 1;
     display: grid;
     grid-auto-rows: min-content;
     color: white;
@@ -20,11 +20,80 @@ body {
 #header {
     background-color: rgb(248, 114, 114);
     min-height: 50px;
-    grid-area: 1 / 2 / 2 / 10;
+    grid-area: 1 / 2 / 2 / 12;
     display: grid;
 }
 
 #main-content {
     background-color: rgb(105, 239, 105);
-    grid-area: 2 / 2 / 10 / 10;
+    grid-area: 2 / 2 / 12 / 12;
+}
+
+#header {
+    padding: 1% 4% 1% 4%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#header-left {
+    background-color: rgb(221, 221, 83);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#header-right {
+    background-color: pink;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#search {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 95%;
+    height: 24px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 24px;
+    padding-left: 16px;
+}
+
+#user {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-icon {
+    align-self: center;
+}
+
+#account {
+    background-color: rgb(61, 61, 177);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-buttons {
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    column-gap: 32px;
+}
+
+button { 
+    height: 36px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background-color: blue;
 }
