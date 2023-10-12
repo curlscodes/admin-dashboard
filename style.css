@@ -3,46 +3,47 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    grid-template: repeat(auto-fill, 12, 1fr) / repeat(auto-fill, 12, 1fr);
+    grid-template-columns: 1fr 5fr;
     background-color: grey;
+}
+
+#main-window {
+    background-color: rgb(60, 206, 74);
 }
 
 #sidebar {
     padding-left: 20px;
     background-color: rgb(113, 113, 248);
-    grid-area: 1 / 1 / 12 / 1;
+    min-width: 200px;
     display: grid;
-    grid-auto-rows: min-content;
+    grid-template-rows: 80px 400px 10px;
+    row-gap: 20px;
     color: white;
     font-size: larger;
 }
 
+#title > div, #nav > div, #settings > div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    column-gap: 12px;
+    align-items: center;
+}
+
 #header {
     background-color: rgb(248, 114, 114);
-    min-height: 50px;
+    min-height: 100px;
     grid-area: 1 / 2 / 2 / 12;
-    display: grid;
-}
-
-#main-content {
-    background-color: rgb(105, 239, 105);
-    grid-area: 2 / 2 / 12 / 12;
-}
-
-#header {
     padding: 1% 4% 1% 4%;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
 #header-left {
-    background-color: rgb(221, 221, 83);
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
 #header-right {
-    background-color: pink;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -74,7 +75,6 @@ body {
 }
 
 #account {
-    background-color: rgb(61, 61, 177);
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     align-items: center;
@@ -82,7 +82,6 @@ body {
 }
 
 #header-buttons {
-    background-color: beige;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -103,6 +102,11 @@ button {
     grid-template-columns: 3fr 1fr;
 }
 
+.main-content-title {
+    font-size: larger;
+    font-weight: 600;
+}
+
 #projects-container {
     padding: 20px;
     display: grid;
@@ -114,6 +118,35 @@ button {
 .projects {
     background-color: white;
     border-radius: 8px;
+    display: grid;
+    grid-template-columns: 8px 1fr;
+    gap:20px
+}
+
+.projects-margin {
+    background-color: rgb(226, 194, 54);
+    border-radius: 8px 0 0 8px;
+}
+
+.projects-title {
+    margin-top: 20px;
+    font-size: larger;
+    font-weight: 600;
+    align-self: self-end;
+}
+
+.projects-content {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding-right: 20px;
+}
+
+.projects-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: end;
+    gap: 12px;
+    padding-right: 24px;
 }
 
 #not-project-container {
@@ -128,4 +161,49 @@ button {
 #announcements-container, #trending-container {
     background-color: white;
     border-radius: 8px;
+}
+
+#announcements-container {
+    display: grid;
+    grid-template-rows: repeat(10px, 10);
+    padding: 20px;
+}
+
+.announcements-divider {
+    height: 1px;
+    background-color: gray;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.announcements-title {
+    align-self: self-end;
+    font-weight: 600;
+}
+
+.announcements-body {
+    font-size: 13px;
+}
+
+#trending-container {
+    display: grid;
+    grid-template-rows: repeat(10px, 4);
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.trending-icon {
+    align-self: center;
+    height: 50px;
+}
+
+.trending-project {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 12px;
+}
+
+.trending-name {
+    align-self: center;
 }
