@@ -97,3 +97,35 @@ button {
     color: white;
     background-color: blue;
 }
+
+#main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#projects-container {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 10px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.projects {
+    background-color: white;
+    border-radius: 8px;
+}
+
+#not-project-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 55px;
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: 10px 1fr 10px 1fr;
+}
+
+#announcements-container, #trending-container {
+    background-color: white;
+    border-radius: 8px;
+}
